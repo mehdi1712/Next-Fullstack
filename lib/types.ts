@@ -19,10 +19,10 @@ export interface AuthFormData {
   password: string;
 }
 
-export interface SessionUser extends User {
+export interface SessionUser extends Omit<User, 'name'> {
   id: string;
   email: string;
-  name: string | null;
+  name: string;
   image: string | null;
 }
 
